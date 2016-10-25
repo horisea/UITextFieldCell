@@ -24,6 +24,7 @@
 }
 
 - (void)setTitleString:(NSString *)string andDataString:(NSString *)dataString andIndexPath:(NSIndexPath *)indexPath{
+    // 核心代码
     self.textField.indexPath = indexPath;
     self.textField.text = dataString;
     self.titleLabel.text = string;
@@ -31,8 +32,8 @@
 
 - (UITextField *)textField{
     if (!_textField) {
-        _textField = [[UITextField alloc] initWithFrame:CGRectMake(120, 0, 160, 40)];
-        _textField.layer.borderColor = [UIColor redColor].CGColor;
+        _textField = [[UITextField alloc] initWithFrame:CGRectMake(120, 5, 160, 30)];
+        _textField.layer.borderColor = [UIColor cyanColor].CGColor;
         _textField.layer.borderWidth = 0.5;
     }
     return _textField;

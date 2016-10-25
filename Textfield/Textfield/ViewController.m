@@ -9,12 +9,15 @@
 #import "ViewController.h"
 #import "HTextViewCell.h"
 #import "UITextField+IndexPath.h"
-
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic , strong)UITableView *tableView;
 
 @property (nonatomic , strong)NSArray *titleArray;
 @property (nonatomic , strong)NSMutableArray *arrayDataSouce;
+
+@property (nonatomic, strong) UIButton *completeBtn;
 
 @end
 
@@ -29,10 +32,12 @@
     self.view.backgroundColor = [UIColor cyanColor];
     [self.view addSubview:self.tableView];
     self.tableView.tableFooterView = [UIView new];
+    [self.tableView addSubview:self.completeBtn];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textFieldDidChanged:) name:UITextFieldTextDidChangeNotification object:nil];
 
 }
 - (void)textFieldDidChanged:(NSNotification *)noti{
+    /// 数据源赋值
     UITextField *textField=noti.object;
     NSIndexPath *indexPath = textField.indexPath;
     [self.arrayDataSouce replaceObjectAtIndex:indexPath.row withObject:textField.text];
@@ -47,8 +52,8 @@
     HTextViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Id];
     if (!cell) {
         cell = [[HTextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Id];
-//        cell.backgroundColor = [UIColor lightGrayColor];
     }
+    /// 核心方法
     [cell setTitleString:self.titleArray[indexPath.row] andDataString:self.arrayDataSouce[indexPath.row] andIndexPath:indexPath];
     return cell;
 }
@@ -70,6 +75,16 @@
 - (void)hiddenKeyBord{
     NSLog(@"要隐藏键盘了........1111111111111");
     [self.view endEditing:YES];
+}
+- (void)btnClick{
+    [self.arrayDataSouce enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *string = (NSString *)obj;
+        if (string.length == 0) {
+            NSLog(@"第%lu个位置元素为空", (unsigned long)idx);
+        }else{
+            NSLog(@"%@", obj);
+        }
+    }];
 }
 #pragma marks- lazy
 - (UITableView *)tableView{
@@ -100,6 +115,16 @@
         _titleArray = @[@"姓名：", @"年龄：", @"工作地点："];
     }
     return _titleArray;
+}
+- (UIButton *)completeBtn{
+    if (!_completeBtn) {
+        _completeBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 260, (SCREEN_WIDTH - 200), 44)];
+        [_completeBtn setTitle:@"打印数据源" forState:UIControlStateNormal];
+        _completeBtn.backgroundColor = [UIColor cyanColor];
+        [_completeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_completeBtn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _completeBtn;
 }
 @end
 
