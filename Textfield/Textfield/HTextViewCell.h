@@ -10,7 +10,7 @@
 
 @interface HTextViewCell : UITableViewCell
 /**
- *  美白图片
+ *  设置cell、数据
  *  @param string        左边的标题
  *  @param dataString    textfield输入内容
  *  @param indexPath     indexPath。唯一绑定当前textfield

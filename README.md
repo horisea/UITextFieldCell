@@ -8,3 +8,4 @@
 
 注意：
   1.demo中，适配的代码是自己写的分类，拖到自己项目中用的时候请注意：
+  2.使用时可直接拖入这两个类 HTextViewCell，UITextField+IndexPath

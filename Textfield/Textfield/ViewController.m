@@ -36,7 +36,7 @@
     self.tableView.tableFooterView = [UIView new];
     [self.tableView addSubview:self.completeBtn];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textFieldDidChanged:) name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textFieldDidChanged:) name:UITextFieldTextDidChangeNotification object:nil]; 
     
 }
 
