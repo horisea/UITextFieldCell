@@ -14,7 +14,9 @@
 		53505AE01D2D49DC00D42067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53505ADF1D2D49DC00D42067 /* Assets.xcassets */; };
 		53505AE31D2D49DC00D42067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53505AE11D2D49DC00D42067 /* LaunchScreen.storyboard */; };
 		53505AEC1D2D4BE400D42067 /* HTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53505AEB1D2D4BE400D42067 /* HTextViewCell.m */; };
-		53505AEF1D324C9F00D42067 /* UITextField+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 53505AEE1D324C9F00D42067 /* UITextField+IndexPath.m */; };
+		E1703BDB1DCC73C1001C0F56 /* HLayerAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = E1703BD61DCC73C1001C0F56 /* HLayerAddition.m */; };
+		E1703BDC1DCC73C1001C0F56 /* HUIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E1703BD81DCC73C1001C0F56 /* HUIView+Category.m */; };
+		E1703BDF1DCC7581001C0F56 /* UITextField+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = E1703BDE1DCC7581001C0F56 /* UITextField+IndexPath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +30,14 @@
 		53505ADF1D2D49DC00D42067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53505AE21D2D49DC00D42067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53505AE41D2D49DC00D42067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53505AEA1D2D4BE400D42067 /* HTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTextViewCell.h; sourceTree = "<group>"; };
-		53505AEB1D2D4BE400D42067 /* HTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTextViewCell.m; sourceTree = "<group>"; };
-		53505AED1D324C9F00D42067 /* UITextField+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+IndexPath.h"; sourceTree = "<group>"; };
-		53505AEE1D324C9F00D42067 /* UITextField+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+IndexPath.m"; sourceTree = "<group>"; };
+		53505AEA1D2D4BE400D42067 /* HTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTextViewCell.h; path = ../HTextViewCell.h; sourceTree = "<group>"; };
+		53505AEB1D2D4BE400D42067 /* HTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTextViewCell.m; path = ../HTextViewCell.m; sourceTree = "<group>"; };
+		E1703BD51DCC73C1001C0F56 /* HLayerAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLayerAddition.h; sourceTree = "<group>"; };
+		E1703BD61DCC73C1001C0F56 /* HLayerAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLayerAddition.m; sourceTree = "<group>"; };
+		E1703BD71DCC73C1001C0F56 /* HUIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HUIView+Category.h"; sourceTree = "<group>"; };
+		E1703BD81DCC73C1001C0F56 /* HUIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HUIView+Category.m"; sourceTree = "<group>"; };
+		E1703BDD1DCC7581001C0F56 /* UITextField+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+IndexPath.h"; path = "../UITextField+IndexPath.h"; sourceTree = "<group>"; };
+		E1703BDE1DCC7581001C0F56 /* UITextField+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+IndexPath.m"; path = "../UITextField+IndexPath.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +70,14 @@
 		53505AD21D2D49DC00D42067 /* Textfield */ = {
 			isa = PBXGroup;
 			children = (
+				53505ADF1D2D49DC00D42067 /* Assets.xcassets */,
 				53505AD91D2D49DC00D42067 /* ViewController.h */,
 				53505ADA1D2D49DC00D42067 /* ViewController.m */,
-				53505AEA1D2D4BE400D42067 /* HTextViewCell.h */,
-				53505AEB1D2D4BE400D42067 /* HTextViewCell.m */,
-				53505AED1D324C9F00D42067 /* UITextField+IndexPath.h */,
-				53505AEE1D324C9F00D42067 /* UITextField+IndexPath.m */,
-				53505AD31D2D49DC00D42067 /* Supporting Files */,
-				53505ADF1D2D49DC00D42067 /* Assets.xcassets */,
 				53505AD61D2D49DC00D42067 /* AppDelegate.h */,
 				53505AD71D2D49DC00D42067 /* AppDelegate.m */,
-				53505ADC1D2D49DC00D42067 /* Main.storyboard */,
-				53505AE11D2D49DC00D42067 /* LaunchScreen.storyboard */,
-				53505AE41D2D49DC00D42067 /* Info.plist */,
+				E1703BA91DCC70D9001C0F56 /* Classes */,
+				E1703BAA1DCC70D9001C0F56 /* others */,
+				53505AD31D2D49DC00D42067 /* Supporting Files */,
 			);
 			path = Textfield;
 			sourceTree = "<group>";
@@ -84,9 +85,43 @@
 		53505AD31D2D49DC00D42067 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				53505ADC1D2D49DC00D42067 /* Main.storyboard */,
+				53505AE11D2D49DC00D42067 /* LaunchScreen.storyboard */,
+				53505AE41D2D49DC00D42067 /* Info.plist */,
 				53505AD41D2D49DC00D42067 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1703BA61DCC6FA6001C0F56 /* 左文字右输入框 */ = {
+			isa = PBXGroup;
+			children = (
+				53505AEA1D2D4BE400D42067 /* HTextViewCell.h */,
+				53505AEB1D2D4BE400D42067 /* HTextViewCell.m */,
+			);
+			name = "左文字右输入框";
+			path = "../左文字右输入框";
+			sourceTree = "<group>";
+		};
+		E1703BA91DCC70D9001C0F56 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1703BA61DCC6FA6001C0F56 /* 左文字右输入框 */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E1703BAA1DCC70D9001C0F56 /* others */ = {
+			isa = PBXGroup;
+			children = (
+				E1703BD51DCC73C1001C0F56 /* HLayerAddition.h */,
+				E1703BD61DCC73C1001C0F56 /* HLayerAddition.m */,
+				E1703BD71DCC73C1001C0F56 /* HUIView+Category.h */,
+				E1703BD81DCC73C1001C0F56 /* HUIView+Category.m */,
+				E1703BDD1DCC7581001C0F56 /* UITextField+IndexPath.h */,
+				E1703BDE1DCC7581001C0F56 /* UITextField+IndexPath.m */,
+			);
+			path = others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,10 +195,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				53505ADB1D2D49DC00D42067 /* ViewController.m in Sources */,
+				E1703BDF1DCC7581001C0F56 /* UITextField+IndexPath.m in Sources */,
+				E1703BDB1DCC73C1001C0F56 /* HLayerAddition.m in Sources */,
 				53505AD81D2D49DC00D42067 /* AppDelegate.m in Sources */,
-				53505AEF1D324C9F00D42067 /* UITextField+IndexPath.m in Sources */,
 				53505AEC1D2D4BE400D42067 /* HTextViewCell.m in Sources */,
 				53505AD51D2D49DC00D42067 /* main.m in Sources */,
+				E1703BDC1DCC73C1001C0F56 /* HUIView+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Textfield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.cs.Textfield;
@@ -286,6 +324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Textfield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.cs.Textfield;
@@ -312,6 +351,7 @@
 				53505AE91D2D49DC00D42067 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

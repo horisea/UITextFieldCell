@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface HTextViewCell : UITableViewCell
-
-- (void)setTitleString:(NSString *)string andDataString:(NSString *)dataString andIndexPath:(NSIndexPath *)indexPath;
+/**
+ *  美白图片
+ *  @param string        左边的标题
+ *  @param dataString    textfield输入内容
+ *  @param indexPath     indexPath。唯一绑定当前textfield
+ */
+- (void)setTitleString:(NSString *)string
+         andDataString:(NSString *)dataString
+          andIndexPath:(NSIndexPath *)indexPath;
 @end

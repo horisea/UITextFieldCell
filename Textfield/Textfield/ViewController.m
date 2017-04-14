@@ -2,21 +2,23 @@
 //  ViewController.m
 //  Textfield
 //
-//  Created by 曹 培 on 16/7/6.
+//  Created by zth on 16/7/6.
 //  Copyright © 2016年 朱同海. All rights reserved.
 //
 
 #import "ViewController.h"
 #import "HTextViewCell.h"
 #import "UITextField+IndexPath.h"
+
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic , strong)UITableView *tableView;
 
 @property (nonatomic , strong)NSArray *titleArray;
 @property (nonatomic , strong)NSMutableArray *arrayDataSouce;
 
+@property (nonatomic , strong)UITableView *tableView;
 @property (nonatomic, strong) UIButton *completeBtn;
 
 @end
@@ -33,16 +35,22 @@
     [self.view addSubview:self.tableView];
     self.tableView.tableFooterView = [UIView new];
     [self.tableView addSubview:self.completeBtn];
+    
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textFieldDidChanged:) name:UITextFieldTextDidChangeNotification object:nil];
-
+    
 }
+
+#pragma mark - notification
+
 - (void)textFieldDidChanged:(NSNotification *)noti{
-    /// 数据源赋值
+    // 数据源赋值
     UITextField *textField=noti.object;
     NSIndexPath *indexPath = textField.indexPath;
     [self.arrayDataSouce replaceObjectAtIndex:indexPath.row withObject:textField.text];
 }
+
 #pragma marks - UITableViewDataSource
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.arrayDataSouce.count;
 }
@@ -53,19 +61,19 @@
     if (!cell) {
         cell = [[HTextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Id];
     }
-    /// 核心方法
+    // 核心方法
     [cell setTitleString:self.titleArray[indexPath.row] andDataString:self.arrayDataSouce[indexPath.row] andIndexPath:indexPath];
     return cell;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSLog(@"要隐藏键盘了.......22222222222");
-
 }
+
 #pragma mark - private
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
-    
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -76,7 +84,9 @@
     NSLog(@"要隐藏键盘了........1111111111111");
     [self.view endEditing:YES];
 }
+
 - (void)btnClick{
+    // 打印数据源
     [self.arrayDataSouce enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSString *string = (NSString *)obj;
         if (string.length == 0) {
@@ -86,10 +96,12 @@
         }
     }];
 }
+
 #pragma marks- lazy
+
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,80, self.view.frame.size.width, self.view.frame.size.height)];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,64, self.view.frame.size.width, self.view.frame.size.height)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.backgroundColor = [UIColor lightGrayColor];
@@ -101,11 +113,10 @@
 
 - (NSMutableArray *)arrayDataSouce{
     if (!_arrayDataSouce) {
-        _arrayDataSouce = [NSMutableArray array];
+        _arrayDataSouce = [NSMutableArray array]; // 注意：初始化时，一定要注意占位，否则第一次去的时候为nil，奔溃
         [_arrayDataSouce addObject:@""];
         [_arrayDataSouce addObject:@""];
         [_arrayDataSouce addObject:@""];
-
     }
     return _arrayDataSouce;
 }
@@ -116,6 +127,7 @@
     }
     return _titleArray;
 }
+
 - (UIButton *)completeBtn{
     if (!_completeBtn) {
         _completeBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 260, (SCREEN_WIDTH - 200), 44)];
@@ -126,21 +138,8 @@
     }
     return _completeBtn;
 }
+
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
