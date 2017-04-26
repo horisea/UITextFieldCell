@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HTextViewCell : UITableViewCell
+
 /**
  *  设置cell、数据
  *  @param string        左边的标题

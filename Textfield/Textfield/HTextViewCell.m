@@ -10,8 +10,10 @@
 #import "UITextField+IndexPath.h"
 
 @interface HTextViewCell ()
+
 @property (strong, nonatomic) UITextField *textField;
 @property (strong, nonatomic) UILabel *titleLabel;
+
 @end
 
 @implementation HTextViewCell
@@ -30,9 +32,10 @@
     self.titleLabel.text = string;
 }
 
+
 - (UITextField *)textField{
     if (!_textField) {
-        _textField = [[UITextField alloc] initWithFrame:CGRectMake(120, 5, 160, 30)];
+        _textField = [[UITextField alloc] initWithFrame:CGRectMake(120, 5, 160, 30)];// 这些坐标我随便写死了，可在layoutsubViews自己改
         _textField.layer.borderColor = [UIColor cyanColor].CGColor;
         _textField.layer.borderWidth = 0.5;
     }
@@ -45,6 +48,4 @@
     }
     return _titleLabel;
 }
-
-
 @end
