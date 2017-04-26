@@ -13,7 +13,7 @@
 		53505ADE1D2D49DC00D42067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53505ADC1D2D49DC00D42067 /* Main.storyboard */; };
 		53505AE01D2D49DC00D42067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53505ADF1D2D49DC00D42067 /* Assets.xcassets */; };
 		53505AE31D2D49DC00D42067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53505AE11D2D49DC00D42067 /* LaunchScreen.storyboard */; };
-		53505AEC1D2D4BE400D42067 /* HTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53505AEB1D2D4BE400D42067 /* HTextViewCell.m */; };
+		E130F1F91EB04003000730E8 /* HTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E130F1F81EB04003000730E8 /* HTextViewCell.m */; };
 		E1703BDB1DCC73C1001C0F56 /* HLayerAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = E1703BD61DCC73C1001C0F56 /* HLayerAddition.m */; };
 		E1703BDC1DCC73C1001C0F56 /* HUIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E1703BD81DCC73C1001C0F56 /* HUIView+Category.m */; };
 		E1703BDF1DCC7581001C0F56 /* UITextField+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = E1703BDE1DCC7581001C0F56 /* UITextField+IndexPath.m */; };
@@ -30,8 +30,8 @@
 		53505ADF1D2D49DC00D42067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53505AE21D2D49DC00D42067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53505AE41D2D49DC00D42067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53505AEA1D2D4BE400D42067 /* HTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTextViewCell.h; path = ../HTextViewCell.h; sourceTree = "<group>"; };
-		53505AEB1D2D4BE400D42067 /* HTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTextViewCell.m; path = ../HTextViewCell.m; sourceTree = "<group>"; };
+		E130F1F71EB04003000730E8 /* HTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTextViewCell.h; sourceTree = "<group>"; };
+		E130F1F81EB04003000730E8 /* HTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTextViewCell.m; sourceTree = "<group>"; };
 		E1703BD51DCC73C1001C0F56 /* HLayerAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLayerAddition.h; sourceTree = "<group>"; };
 		E1703BD61DCC73C1001C0F56 /* HLayerAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLayerAddition.m; sourceTree = "<group>"; };
 		E1703BD71DCC73C1001C0F56 /* HUIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HUIView+Category.h"; sourceTree = "<group>"; };
@@ -75,6 +75,8 @@
 				53505ADA1D2D49DC00D42067 /* ViewController.m */,
 				53505AD61D2D49DC00D42067 /* AppDelegate.h */,
 				53505AD71D2D49DC00D42067 /* AppDelegate.m */,
+				E130F1F71EB04003000730E8 /* HTextViewCell.h */,
+				E130F1F81EB04003000730E8 /* HTextViewCell.m */,
 				E1703BA91DCC70D9001C0F56 /* Classes */,
 				E1703BAA1DCC70D9001C0F56 /* others */,
 				53505AD31D2D49DC00D42067 /* Supporting Files */,
@@ -93,20 +95,9 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E1703BA61DCC6FA6001C0F56 /* 左文字右输入框 */ = {
-			isa = PBXGroup;
-			children = (
-				53505AEA1D2D4BE400D42067 /* HTextViewCell.h */,
-				53505AEB1D2D4BE400D42067 /* HTextViewCell.m */,
-			);
-			name = "左文字右输入框";
-			path = "../左文字右输入框";
-			sourceTree = "<group>";
-		};
 		E1703BA91DCC70D9001C0F56 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E1703BA61DCC6FA6001C0F56 /* 左文字右输入框 */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -198,9 +189,9 @@
 				E1703BDF1DCC7581001C0F56 /* UITextField+IndexPath.m in Sources */,
 				E1703BDB1DCC73C1001C0F56 /* HLayerAddition.m in Sources */,
 				53505AD81D2D49DC00D42067 /* AppDelegate.m in Sources */,
-				53505AEC1D2D4BE400D42067 /* HTextViewCell.m in Sources */,
 				53505AD51D2D49DC00D42067 /* main.m in Sources */,
 				E1703BDC1DCC73C1001C0F56 /* HUIView+Category.m in Sources */,
+				E130F1F91EB04003000730E8 /* HTextViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
